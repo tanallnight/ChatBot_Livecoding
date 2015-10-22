@@ -1,3 +1,10 @@
+// your livecoding username
+// used to determine if an admin level command is valid or not
+var MY_USERNAME = "your_username" //all lower case
+//repository of your current code
+// if code does not have repository change the link to a message like "No repo yet"
+var CURRENT_REPO = "https://github.com/username/repo"; 
+
 var container = $('.message-pane');
 var messageQueue = [];
 var messageCount;
@@ -6,7 +13,6 @@ var submit = $('input[type="submit"]');
 var myUser = $('.main-navigation .user-name').text().trim().toUpperCase();
 var gameStopped = true;
 var botWritingCount = 0;
-var CURRENT_REPO = "https://github.com/tanallnight/Blip";
 
 // Initiale the color pallete
 $('#username-color').trigger('click');
@@ -210,7 +216,7 @@ function processMessage() {
 }
 
 function isAdmin(userName) {
-    return userName == "thatbrownguy";
+    return userName == MY_USERNAME;
 }
 
 function processMessages() {
